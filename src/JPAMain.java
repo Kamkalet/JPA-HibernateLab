@@ -1,7 +1,4 @@
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -22,7 +19,8 @@ public class JPAMain {
         Product product3 = new Product("paprika", 100);
         Category category1 = new Category("zabawki");
         Category category2 = new Category("warzywa");
-        Supplier supplier1 = new Supplier("Biedronka", "Biedronkowa", "Biedronki", "32=098");
+        Supplier supplier1 = new Supplier("Biedronka", "Biedronkowa", "Biedronki", "32=098", "88888888888888888888888888888888");
+        Customer customer1 = new Customer("Nike", "nowa", "Piaski Nowe City", "32-543", 0.3f);
 
         //for suppliers binding
         List<Product> products = new ArrayList<>();
@@ -86,6 +84,12 @@ public class JPAMain {
             em.persist(purchase1);
             em.persist(purchase2);
             em.persist(purchase3);
+
+//            Query q = em.createQuery("from Supplier");
+//            List<Supplier> supList = q.getResultList();
+//            for (Supplier s: supList) {
+//                System.out.println(s);
+//            }
 
             etx.commit();
 

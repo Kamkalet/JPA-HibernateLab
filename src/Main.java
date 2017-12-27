@@ -32,7 +32,7 @@ public class Main {
         Product product3 = new Product("paprika", 100);
         Category category1 = new Category("zabawki");
         Category category2 = new Category("warzywa");
-        Supplier supplier1 = new Supplier("Biedronka", "Biedronkowa", "Biedronki", "32=098");
+        Supplier supplier1 = new Supplier("Biedronka", "Biedronkowa", "Biedronki", "32=098", "123");
 
         //for suppliers binding
         List<Product> products = new ArrayList<>();
