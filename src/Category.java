@@ -10,7 +10,7 @@ class Category {
 
     private String name;
 
-    @ManyToMany(mappedBy = "category")
+    @OneToMany(mappedBy = "category")
     private List<Product> products;
 
     public Category(String name) {

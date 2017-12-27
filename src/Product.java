@@ -11,7 +11,7 @@ class Product {
     private String productName;
     private int unitsInStock;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name="SUPPLIER_FK")
     private Supplier supplier;
 
